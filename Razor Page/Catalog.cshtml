@@ -1,0 +1,59 @@
+@model IEnumerable<ASPNET6_Template.Models.Problem>
+@{
+    ViewData["Title"]="Catalog";
+}
+<h1>Catalog</h1>
+<p>
+    <a asp-action="Craft">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.InterrogatorsProblem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Choice1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Choice2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Choice3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Choice4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Solution)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model){
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.InterrogatorsProblem)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Choice1)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Choice2)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Choice3)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Choice4)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Solution)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

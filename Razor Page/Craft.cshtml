@@ -1,0 +1,55 @@
+@model ASPNET6_Template.Models.Problem
+@{
+    ViewData["Title"]="Craft";
+}
+<h1>View</h1>
+<h4>Problem</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Craft">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control"/>
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InterrogatorsProblem" class="control-label"></label>
+                <input asp-for="InterrogatorsProblem" class="form-control"/>
+                <span asp-validation-for="InterrogatorsProblem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Choice1" class="control-label"></label>
+                <input asp-for="Choice1" class="form-control"/>
+                <span asp-validation-for="Choice1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Choice2" class="control-label"></label>
+                <input asp-for="Choice2" class="form-control"/>
+                <span asp-validation-for="Choice2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Choice3" class="control-label"></label>
+                <input asp-for="Choice3" class="form-control"/>
+                <span asp-validation-for="Choice3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Choice4" class="control-label"></label>
+                <input asp-for="Choice4" class="form-control"/>
+                <span asp-validation-for="Choice4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Solution" class="control-label"></label>
+                <input asp-for="Solution" class="form-control"/>
+                <span asp-validation-for="Solution" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" id="btnCraft" value="create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Catalog">Back to list</a>
+</div>
